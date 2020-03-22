@@ -1,0 +1,71 @@
+{% extends "layout/layout.html" %}
+
+{% block layout_content %}
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <h1 style="text-align:center">THE MOVING KITCHEN</h1>
+
+    <div class="mySlides w3-display-container w3-center">
+        <img src="../static/img/1.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        </div>
+    </div>
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
+        <h2 class="w3-wide">Who are we?</h2>
+        <p class="w3-justify">With the increasing traffic jam in the city, having a quick and clean
+            bite to eat is a great help especially if you have a tight schedule and want to eat quickly at any time and
+            any meal.
+            The need for it came from the problems faced through each meal you decided to buy rather than cooking it, so
+            you will
+            reach and order in the fastest, easiest possible way. And don't forget, we can come serve in your
+            events.</p>
+    </div>
+
+    <div style="background-image: url('/static/img/3.jpg');    background-position: center; " id="band"
+         class="w3-container ">
+        <h2 style="color:white; text-align:center">Find the trucks current location</h2>
+        <p style="text-align:center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.44077745358!2d35.89064861464214!3d31.94893683305199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca0f33d0576c5%3A0xd27c4f27fdf66534!2sAbdoun%20Cir.%2C%20Amman!5e0!3m2!1sen!2sjo!4v1573080857747!5m2!1sen!2sjo"
+                    width="400" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </p>
+    </div>
+
+    <div class="w3-black" id="tour">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+            <h2 class="w3-wide w3-center">The menu</h2>
+            <br>
+            <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                <a style="outline: 5px dotted white;align:center; width:100%"
+                   class="w3-button w3-black w3-margin-bottom" href="{% url 'food' %}">Order
+                    food here
+                </a>
+            </div>
+        </div>
+
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="catering">
+            <h2 class="w3-wide w3-center">Book for catering</h2>
+            <div class="w3-row-padding w3-padding-32" style="margin:0 -16px; ">
+                <a style="outline: 5px dotted white;align:center; width:100%"
+                   class="w3-button w3-black w3-margin-bottom"
+                   href="{% url 'cater' %}">Fill the form
+
+                </a>
+            </div>
+        </div>
+        <div class="w3-black" id="feedback">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+                <h2 class="w3-wide w3-center">Add a feedback</h2><br>
+                <form action="..." target="_blank">
+                    <input style="align:center; width:100%" class="w3-input w3-border w3-center" type="text"
+                           placeholder="Message" required name="Message">
+                    <button style="align:center; width:100%" class="w3-button w3-black w3-section w3-center"
+                            type="submit">SEND
+                    </button>
+                </form>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
