@@ -24,7 +24,7 @@ class Main(TemplateView):
 
 class Sign(CreateView):
     model = MyClubUser
-    fields = ['name', 'phone', 'email', 'password']
+    fields = ['name', 'phone', 'email', 'password1', 'password2']
     success_url = reverse_lazy('main')
 
 
